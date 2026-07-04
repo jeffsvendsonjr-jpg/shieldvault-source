@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ShieldVault</title>
+  <meta name="description" content="ShieldVault's privacy policy. Local-only detection: your content is never stored or transmitted. Read exactly what is and isn't collected.">
+  <style>
+    :root {
+      --bg: #0b0d12; --panel: #131722; --text: #e6e8ee; --muted: #8a8f9c;
+      --accent: #4c6fff; --accent-soft: #8ea2ff; --good: #34d399; --border: #1f2433;
+    }
+    * { box-sizing: border-box; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { background: radial-gradient(120% 80% at 50% -10%, #1b2140 0%, #0b0d12 55%); color: var(--text); line-height: 1.7; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 60px; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--text); text-decoration: none; }
+    .logo .mark { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, #4c6fff, #3350cc); display: grid; place-items: center; font-size: 16px; }
+    nav a.back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    nav a.back:hover { color: var(--text); }
+    h1 { font-size: 34px; font-weight: 800; margin: 36px 0 6px; letter-spacing: -0.5px; }
+    .updated { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+    .tldr {
+      background: linear-gradient(160deg, rgba(52,211,153,0.10), rgba(52,211,153,0.03));
+      border: 1px solid rgba(52,211,153,0.3); border-radius: 14px; padding: 20px 22px; margin-bottom: 36px;
+    }
+    .tldr strong { color: var(--good); }
+    h2 { font-size: 20px; font-weight: 700; margin: 34px 0 10px; }
+    p, li { color: #c6cad4; font-size: 15px; }
+    ul { padding-left: 22px; margin: 10px 0; }
+    li { margin: 6px 0; }
+    .never {
+      background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px; margin: 12px 0;
+    }
+    code { background: rgba(255,255,255,0.07); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+    a { color: var(--accent-soft); }
+    footer { border-top: 1px solid var(--border); margin-top: 50px; padding-top: 22px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="/"><span class="mark">&#128737;</span> ShieldVault</a>
+      <a class="back" href="/">&larr; Back to shieldvault.site</a>
+    </nav>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective date: July 4, 2026 &middot; Applies to the ShieldVault browser extension and shieldvault.site</p>
+
+    <div class="tldr">
+      <p><strong>The short version:</strong> ShieldVault detects secrets and risky messages <strong>entirely on your device</strong>. The text you type or paste is never stored, transmitted, logged, or seen by us — there is no server that could receive it. The only data that ever reaches us is what's needed to activate an optional Pro license: a license key and the purchase email.</p>
+    </div>
+
+    <h2>What ShieldVault does with page content</h2>
+    <p>ShieldVault scans text you type or paste into supported sites, locally, inside your browser tab, to detect secrets (API keys, passwords, personal data) and — if you enable the optional Reputation Guard — heated language. This analysis:</p>
+    <ul>
+      <li>runs 100% on your device, in the page itself;</li>
+      <li>never transmits page content anywhere, to us or anyone else;</li>
+      <li>never stores the content it scans — not even the matched secret.</li>
+    </ul>
+
+    <h2>What is stored locally on your device</h2>
+    <p>ShieldVault keeps a small amount of data in your browser's local extension storage (<code>chrome.storage.local</code>), which stays on your machine:</p>
+    <ul>
+      <li><strong>Your settings</strong> — which protections are on or off.</li>
+      <li><strong>Paused sites</strong> — hostnames where you've paused protection.</li>
+      <li><strong>Activity history (metadata only)</strong> — when something is caught, ShieldVault records the time, the site's hostname, the category (e.g., "secret" or "review"), how it was caught (e.g., "paste"), and the detector's name (e.g., "OpenAI API Key"). <strong>Never the content itself.</strong> You can clear this history anytime from the popup.</li>
+      <li><strong>Pro license state</strong> — your license key, plan, expiry, and purchase email, if you buy Pro.</li>
+    </ul>
+    <p>Uninstalling the extension deletes all of this.</p>
+
+    <h2>What is transmitted, and when</h2>
+    <p>The extension makes network requests to exactly one host — <code>shieldvault.site</code> — and only for optional Pro licensing:</p>
+    <ul>
+      <li><strong>License activation and revalidation:</strong> your license key is sent to our licensing server to confirm it's valid.</li>
+      <li><strong>Checkout:</strong> if you click a purchase button, a Stripe checkout page opens. If you've previously activated a license, your purchase email is included so a monthly-to-lifetime upgrade links to the same purchase. Payment details are handled entirely by <a href="https://stripe.com/privacy" rel="noopener">Stripe</a>; we never see your card number.</li>
+    </ul>
+    <p>If you never buy Pro, the extension makes <strong>no network requests at all</strong>.</p>
+
+    <h2>What we never do</h2>
+    <div class="never">
+      <ul>
+        <li>No collection or transmission of the text you type or paste — ever.</li>
+        <li>No telemetry, no analytics, no tracking pixels, no crash reporting.</li>
+        <li>No accounts. We don't know who you are unless you buy Pro, and then we know only your purchase email.</li>
+        <li>No selling, sharing, or transferring data to third parties, beyond Stripe processing your payment.</li>
+        <li>No remote code — every line the extension runs ships in the reviewed package.</li>
+        <li>No browsing-history collection. The extension has no <code>tabs</code> permission and cannot see your open tabs.</li>
+      </ul>
+    </div>
+
+    <h2>Permissions, explained</h2>
+    <ul>
+      <li><code>activeTab</code> — lets the popup see the current site's hostname when you click the ShieldVault icon, so "Pause on this site" pauses the right site.</li>
+      <li><code>storage</code> — holds the local data described above.</li>
+      <li>Host access to <code>shieldvault.site</code> — used only for the licensing requests described above.</li>
+    </ul>
+
+    <h2>Data retention and your choices</h2>
+    <ul>
+      <li>Local activity history is capped and can be cleared anytime (popup &rarr; Clear History).</li>
+      <li>Every protection can be turned off in Settings; every soft-review category has a one-click disable.</li>
+      <li>Removing your license from the browser deletes the locally stored license data.</li>
+      <li>Uninstalling the extension removes everything it stored.</li>
+      <li>For Pro purchases, our licensing server retains the license record (key, plan, purchase email) needed to honor your purchase. To request deletion, email us — note that deleting a license record makes the license unrecoverable.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>ShieldVault is not directed at children under 13 and does not knowingly collect information from them.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the effective date above will change with it, and material changes will be noted on this page. The policy will always reflect what the shipped code actually does — you can verify that yourself: the extension's full source is published for inspection.</p>
+
+    <h2>Contact</h2>
+    <p>Questions, deletion requests, or anything this page didn't answer: <a href="mailto:support@shieldvault.site">support@shieldvault.site</a></p>
+
+    <footer>
+      ShieldVault &mdash; Detection without possession. &middot; <a href="/">Home</a>
+    </footer>
+  </div>
+</body>
+</html>
