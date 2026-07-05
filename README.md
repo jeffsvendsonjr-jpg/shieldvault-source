@@ -9,9 +9,8 @@ ShieldVault is distributed.
 | File | Contents |
 | --- | --- |
 | [`shieldvaultmirrorupdate.zip`](shieldvaultmirrorupdate.zip) | Latest version — full extension source |
-| [`shieldvaultmirror.zip`](shieldvaultmirror.zip) | Previous release |
 
-Download either zip to read, audit, or build ShieldVault from source.
+Download the zip to read, audit, or build ShieldVault from source.
 
 ## License
 
