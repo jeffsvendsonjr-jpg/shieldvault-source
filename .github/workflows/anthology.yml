@@ -1,0 +1,34 @@
+name: Detection Anthology
+
+on:
+  pull_request:
+    paths:
+      - "anthology/**"
+      - "scripts/validate_anthology.py"
+      - ".github/workflows/anthology.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "anthology/**"
+      - "scripts/validate_anthology.py"
+      - ".github/workflows/anthology.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate public detection corpus
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate anthology
+        run: python scripts/validate_anthology.py
